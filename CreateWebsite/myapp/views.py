@@ -77,6 +77,7 @@ def make_zip(request):
                 return response
             except Exception as e:
                 form =submit_form()
+                response = HttpResponse(f"Error :{e}")
                 return response
     else:
         form = submit_form()
